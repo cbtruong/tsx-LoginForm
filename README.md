@@ -29,4 +29,9 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject"
         },
+    - open file vite.config.ts and change your-response-name to your project name.
+    export default defineConfig({
+          plugins: [react()],
+          base: '/your-repository-name/'
+        })
     Deploy: npm run deploy
