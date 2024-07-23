@@ -18,6 +18,7 @@ const Login = () => {
 			email: "",
 			pass: "",
 			phone: "",
+			noErr:"",
 		};
 		if (!email) {
 			newError = { ...newError, email: "Please enter your email" };

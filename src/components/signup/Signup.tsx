@@ -20,7 +20,8 @@ const Signup: React.FC = () => {
 			name: '',
 			email: '',
 			pass: '',
-			phone: ''
+			phone: '',
+			noErr:"",
 		};
 
 		// Perform form validation
@@ -53,8 +54,12 @@ const Signup: React.FC = () => {
 
 		// Submit logic if all fields are valid
 		if (noErrors) {
-			// Perform submit action (e.g., send data to server)
-			console.log("Form submitted successfully!");
+			setName("");
+			setEmail("");
+			setPhone("");
+			setPass("");
+			newError = { ...newError, noErr: "Sign Up Success" };
+			setErr(newError);
 		}
 	};
 
@@ -98,6 +103,7 @@ const Signup: React.FC = () => {
 					onChange={(e) => setPass(e.target.value)}
 				/>
 				<p className={`error ${err?.pass ? "showErr" : ""}`}>{err?.pass}</p>
+				<p className={`noError ${err?.noErr ? "showErr" : ""}`}>{err?.noErr}</p>
 			</div>
 			<button type="submit">Submit</button>
 		</form>

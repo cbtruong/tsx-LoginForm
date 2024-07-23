@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Login from '../../components/login/Login';
 import Signup from '../../components/signup/Signup';
 import './loginSignup.css';
@@ -7,7 +8,7 @@ const LoginSignUp = () => {
     <div className="container">
 			<input type="checkbox" id="check" />
 			<div className="signup">
-				<Signup/>
+				<Signup />
 			</div>
 			<div className="login">
 				<Login/>

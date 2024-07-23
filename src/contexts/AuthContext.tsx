@@ -7,6 +7,7 @@ const AuthContext = createContext<AuthContextType>({
     email: "",
     phone: "",
     pass: "",
+    noErr:"",
   },
   setFormError: () => {},
 });
@@ -18,6 +19,7 @@ const AuthProvider: React.FC<Props> = ({ children }) => {
     email: "",
     phone: "",
     pass: "",
+    noErr:"",
   });
 
   return (

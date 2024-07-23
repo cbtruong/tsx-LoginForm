@@ -3,6 +3,7 @@ export type FormError = {
 	email: string;
 	phone: string;
 	pass: string;
+	noErr:string,
 };
 
 export type AuthContextType = {
