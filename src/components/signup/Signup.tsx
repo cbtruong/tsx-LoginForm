@@ -32,12 +32,11 @@ const Signup: React.FC = () => {
 		if (!email || !emailPattern.test(email)) {
 			newError = { ...newError, email: "Please enter your email" };
 		}
-		
-
 		if (!phone) {
 			newError = { ...newError, phone: "Please enter your phone number" };
-		}
-
+		} else if (!/^\d{10}$/.test(phone)) {
+			newError = { ...newError, phone: "Please enter a valid phone number" };
+		}		
 		if (!pass) {
 			newError = { ...newError, pass: "Please enter your password" };
 		}else 

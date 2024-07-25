@@ -22,7 +22,9 @@ const Login = () => {
 		};
 		if (!email) {
 			newError = { ...newError, email: "Please enter your email" };
-		}
+		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+			newError = { ...newError, email: "Please enter a valid email address" };
+		}		
 		if (!pass) {
 			newError = { ...newError, pass: "Please enter your password" };
 		} else if (pass.length < 6) {

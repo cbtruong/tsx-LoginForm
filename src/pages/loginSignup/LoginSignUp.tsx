@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Login from '../../components/login/Login';
 import Signup from '../../components/signup/Signup';
 import './loginSignup.css';
